@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Inventory">
+            <items>
+              <MenuItem mnemonicParsing="false" text="My Warehouses..." />
+                  <MenuItem mnemonicParsing="false" text="My Suppliers..." />
+                  <MenuItem mnemonicParsing="false" text="My Customers..." />
+                  <MenuItem mnemonicParsing="false" text="My Expenses..." />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Settings">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Database Settings" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="User">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Login" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <FlowPane hgap="4.0" prefWidth="200.0" vgap="4.0">
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+         <children>
+            <ToggleButton mnemonicParsing="false" selected="true" text="Dashboard">
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleGroup" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton mnemonicParsing="false" text="Inventory" toggleGroup="$toggleGroup" />
+            <ToggleButton mnemonicParsing="false" text="Purchases" toggleGroup="$toggleGroup" />
+            <ToggleButton mnemonicParsing="false" text="Stock Transfers" toggleGroup="$toggleGroup" />
+            <ToggleButton mnemonicParsing="false" text="Deliveries" toggleGroup="$toggleGroup" />
+         </children>
+      </FlowPane>
+      <Separator prefWidth="200.0" />
+      <StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+      <Separator prefWidth="200.0" />
+      <HBox prefWidth="200.0" spacing="4.0">
+         <children>
+            <Label text="Status">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <ProgressBar prefWidth="200.0" progress="0.0" />
+            <Label text="Progress..." />
+         </children>
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
